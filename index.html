@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="ThryveFit helps you track workouts, monitor nutrition, and visualize progress from a single dashboard.">
+    <title>ThryveFit – Track. Train. Transform.</title>
+
+    <!-- THIS LOADS THE CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
     <div class="page-shell">
@@ -181,5 +186,73 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <div class="page">
+        <header class="navbar">
+            <div class="nav-left">
+                <div class="logo-placeholder" aria-hidden="true"></div>
+                <p class="eyebrow">Performance Platform</p>
+                <h1 class="brand">Thryve<span>Fit</span></h1>
+            </div>
+
+            <nav class="nav-right" aria-label="Primary">
+                <a href="#features">Features</a>
+                <a href="#plans">Pricing</a>
+                <a href="#download">Download</a>
+                <button class="nav-btn">Get Started</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <p class="eyebrow">Train smarter, not harder</p>
+                    <h2>Track. Train. Transform.</h2>
+                    <p class="intro">Your all-in-one performance lab for workouts, nutrition, and progress tracking. Gain clarity on every rep and meal so you can stay consistent.</p>
+
+                    <ul class="hero-highlights">
+                        <li>Adaptive training plans that evolve with your metrics.</li>
+                        <li>Macro-friendly nutrition tracking with barcode scanning.</li>
+                        <li>Real-time analytics that celebrate every milestone.</li>
+                    </ul>
+
+                    <div class="cta-row">
+                        <button class="cta-btn">Start Free Trial</button>
+                        <button class="ghost-btn" id="download">Download App</button>
+                    </div>
+                </div>
+
+                <div class="hero-mockups" aria-hidden="true">
+                    <img src="mockup1.png" class="phone phone1" alt="Workout plan preview">
+                    <img src="mockup2.png" class="phone phone2" alt="Nutrition tracking preview">
+                    <img src="mockup3.png" class="phone phone3" alt="Progress tracking preview">
+                </div>
+            </section>
+
+            <section class="features" id="features">
+                <article class="feature-card">
+                    <div class="icon blue"></div>
+                    <h3>Smart Nutrition Tracking</h3>
+                    <p>Log meals faster with AI-powered suggestions, barcode scanning, and macro goals tailored to you.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon green"></div>
+                    <h3>Personalized Workout Plans</h3>
+                    <p>Auto-progressing programs adjust based on readiness scores, fatigue, and session feedback.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon graph"></div>
+                    <h3>Advanced Progress Analytics</h3>
+                    <p>Interactive dashboards reveal trends across strength, endurance, recovery, and body metrics.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer" id="plans">
+            <p>Ready to transform your training? Join thousands of athletes optimizing with ThryveFit.</p>
+            <button class="cta-btn">View Plans</button>
+        </footer>
+    </div>
 </body>
 </html>

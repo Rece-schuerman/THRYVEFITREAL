@@ -17,6 +17,12 @@
     --surface: rgba(var(--dark-card-rgb), 0.9);
     --glass: rgba(var(--dark-card-rgb), 0.65);
     --border: var(--border-gray);
+    --bg: #030305;
+    --card-bg: #0f0f0f;
+    --accent: #1E40FF;
+    --accent-2: #22c55e;
+    --text: #f5f5f5;
+    --muted: #b5b5b5;
 }
 
 * {
@@ -38,6 +44,30 @@ body {
 .page-shell {
     max-width: 1200px;
     margin: 0 auto;
+    background: radial-gradient(circle at top, rgba(30,64,255,0.25), transparent 55%),
+                var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.page {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 2rem 5% 4rem;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -75,6 +105,11 @@ body {
 .brand-chip img {
     width: 150px;
     height: auto;
+.logo-placeholder {
+    width: 45px;
+    height: 45px;
+    background: var(--accent);
+    border-radius: 8px;
 }
 
 .brand-chip span {
@@ -91,6 +126,19 @@ body {
 
 .nav-links a {
     color: var(--muted);
+.brand span {
+    color: var(--accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    margin: 0 1rem;
+    font-size: 0.95rem;
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
@@ -106,6 +154,11 @@ body {
 }
 
 button {
+.nav-btn {
+    background: var(--accent);
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    color: white;
     border: none;
     border-radius: 999px;
     font-weight: 600;
@@ -133,6 +186,13 @@ button {
     border: 1px solid rgba(var(--white-rgb), 0.2);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* HERO */
 main {
     display: flex;
     flex-direction: column;
@@ -179,6 +239,10 @@ main {
 
 .hero-actions {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 1rem;
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
@@ -206,6 +270,69 @@ main {
     display: grid;
     place-items: center;
     min-height: 420px;
+.hero-text {
+    flex: 1 1 360px;
+    max-width: 540px;
+}
+
+.hero-text h2 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    margin-top: 0.3rem;
+}
+
+.hero-text .intro {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.hero-highlights {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: #d3d3d3;
+}
+
+.hero-highlights li {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hero-highlights li::before {
+    content: "•";
+    color: var(--accent-2);
+    font-weight: 700;
+}
+
+.cta-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-btn {
+    background: var(--accent);
+    padding: 1rem 2.2rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.ghost-btn {
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .screenshot.halo {
@@ -316,6 +443,10 @@ main {
 
 .track p {
     color: var(--muted);
+.phone {
+    width: 230px;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
 }
 
 .palette {
@@ -583,5 +714,71 @@ main {
 
     .track {
         animation-duration: 35s;
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    min-height: 280px;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+.blue { background: var(--accent); }
+.green { background: var(--accent-2); }
+.graph { background: linear-gradient(135deg,var(--accent),#0ea5e9); }
+
+.footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 1px solid #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.footer p {
+    color: var(--muted);
+    max-width: 540px;
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-mockups {
+        justify-content: center;
     }
 }
