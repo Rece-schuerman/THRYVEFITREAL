@@ -1,0 +1,26 @@
+<svg width="220" height="54" viewBox="0 0 220 54" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40FF"/>
+      <stop offset="55%" stop-color="#CCCCCC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#1E40FF" flood-opacity="0.35"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="220" height="54" rx="16" fill="rgba(15,15,15,0.85)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="28" y="35" font-family="'Space Grotesk', 'Inter', system-ui" font-size="28" font-weight="700" fill="white">
+    <tspan fill="url(#brandGradient)" filter="url(#glow)">THRYVE</tspan>
+    <tspan dx="4" fill="#ffffff">FIT</tspan>
+  </text>
+  <circle cx="24" cy="26" r="8" fill="url(#brandGradient)">
+    <animate attributeName="r" values="6;8;6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
