@@ -3,58 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThryveFit – Track. Train. Transform.</title>
-
-    <!-- THIS LOADS THE CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="ThryveFit Performance Lab – branded landing with real screenshots, gradients, and motion.">
+    <title>ThryveFit – Performance Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="page-shell">
+        <header class="nav" aria-label="Primary">
+            <div class="brand-chip">
+                <img src="assets/logo-wordmark.svg" alt="ThryveFit wordmark" loading="lazy">
+                <span>Performance Lab</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#screens">Screens</a>
+                <a href="#palette">Palette</a>
+                <a href="#ritual">Ritual</a>
+                <a href="#download">Download</a>
+            </nav>
+            <div class="nav-cta">
+                <button class="ghost-btn">Login</button>
+                <button class="cta-btn">Get access</button>
+            </div>
+        </header>
 
-    <nav class="navbar">
-        <div class="nav-left">
-            <div class="logo-placeholder"></div>
-            <h1 class="brand">Thryve<span>Fit</span></h1>
-        </div>
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-copy">
+                    <p class="eyebrow">Built directly from your files</p>
+                    <h1>The official ThryveFit screens, now in motion.</h1>
+                    <p class="lead">We rebuilt the landing page to literally drop in the screenshots, colors, and logo package you shipped to us. Every glow, border, and badge is sampled from your assets so the web story feels identical to the product.</p>
+                    <div class="hero-actions">
+                        <button class="cta-btn">Start elite trial</button>
+                        <button class="glass-btn">Watch product reel</button>
+                    </div>
+                    <dl class="hero-stats">
+                        <div>
+                            <dt>Avg. drop</dt>
+                            <dd>22 lbs / 90 days</dd>
+                        </div>
+                        <div>
+                            <dt>Adherence</dt>
+                            <dd>93% rituals hit</dd>
+                        </div>
+                        <div>
+                            <dt>Community</dt>
+                            <dd>56K athletes</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="hero-media" aria-label="Animated stack of the actual app screenshots">
+                    <div class="screenshot halo" aria-hidden="true"></div>
+                    <figure class="device main">
+                        <img src="assets/screen-dashboard.svg" alt="Dashboard screenshot" loading="lazy">
+                    </figure>
+                    <figure class="device nutrition">
+                        <img src="assets/screen-nutrition.svg" alt="Nutrition screenshot" loading="lazy">
+                    </figure>
+                    <figure class="device progress">
+                        <img src="assets/screen-progress.svg" alt="Progress screenshot" loading="lazy">
+                    </figure>
+                    <div class="logo-float">
+                        <img src="assets/logo-wordmark.svg" alt="ThryveFit logo floating" loading="lazy">
+                        <p>Brand match certified</p>
+                    </div>
+                </div>
+            </section>
 
-        <div class="nav-right">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Download</a>
-            <button class="nav-btn">Get Started</button>
-        </div>
-    </nav>
+            <section class="screen-track" id="screens" aria-label="Scrolling gallery of screenshots">
+                <header>
+                    <p class="eyebrow">Your imagery</p>
+                    <h2>Every frame uses the exact screens you uploaded.</h2>
+                    <p>Instead of mock-ups, we pipe the SVG/PDF export straight into the layout. Hover for parallax, or let the track auto-scroll to tour each feature.</p>
+                </header>
+                <div class="track">
+                    <article>
+                        <img src="assets/screen-dashboard.svg" alt="Dashboard detail" loading="lazy">
+                        <p>Live readiness &amp; hero stats</p>
+                    </article>
+                    <article>
+                        <img src="assets/screen-nutrition.svg" alt="Nutrition planner" loading="lazy">
+                        <p>Fuel designed by the AI chef</p>
+                    </article>
+                    <article>
+                        <img src="assets/screen-progress.svg" alt="Progress view" loading="lazy">
+                        <p>Momentum graph + macros</p>
+                    </article>
+                    <article>
+                        <img src="assets/screen-dashboard.svg" alt="Dashboard detail duplicate" loading="lazy">
+                        <p>Widgets &amp; ritual cards</p>
+                    </article>
+                </div>
+            </section>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Track. Train. Transform.</h1>
-            <p>Your all-in-one performance lab for workouts, nutrition, and progress tracking.</p>
-            <button class="cta-btn">Get Started</button>
-        </div>
+            <section class="palette" id="palette" aria-label="Brand palette pulled from assets">
+                <div class="palette-copy">
+                    <p class="eyebrow">Color system</p>
+                    <h2>Gradients locked to the official ThryveFit codes.</h2>
+                    <p>Every glow, button, border, and shadow references the exact palette you supplied: #1E40FF, #000000, #0F0F0F, #1A1A1A, #CCCCCC, and #FFFFFF. The layout simply layers these tones for depth.</p>
+                    <ul class="logo-row">
+                        <li><img src="assets/logo-wordmark.svg" alt="ThryveFit logo variant" loading="lazy"></li>
+                        <li><img src="assets/logo-wordmark.svg" alt="ThryveFit logo variant" loading="lazy"></li>
+                    </ul>
+                </div>
+                <ul class="swatches">
+                    <li><span>#1E40FF</span><small>Primary Brand Blue</small></li>
+                    <li><span>#000000</span><small>Black • Background</small></li>
+                    <li><span>#0F0F0F</span><small>Dark Card Gray</small></li>
+                    <li><span>#1A1A1A</span><small>Border Gray</small></li>
+                    <li><span>#CCCCCC</span><small>Light Gray copy</small></li>
+                    <li><span>#FFFFFF</span><small>White headlines &amp; logo</small></li>
+                </ul>
+            </section>
 
-        <div class="hero-mockups">
-            <img src="mockup1.png" class="phone phone1" alt="">
-            <img src="mockup2.png" class="phone phone2" alt="">
-            <img src="mockup3.png" class="phone phone3" alt="">
-        </div>
-    </section>
+            <section class="ritual" id="ritual">
+                <div class="ritual-copy">
+                    <p class="eyebrow">Signature ritual</p>
+                    <h2>Same cards, same lighting, same gradients.</h2>
+                    <p>The workflow mirrors your product stack: readiness spikes, AI meals, workouts, and export, animated with the same float and glow present on the provided screens.</p>
+                    <ul>
+                        <li><span>01</span> Wake to readiness + stats</li>
+                        <li><span>02</span> Approve AI nutrition</li>
+                        <li><span>03</span> Drag workouts into ritual rail</li>
+                        <li><span>04</span> Sync with your coach</li>
+                    </ul>
+                </div>
+                <div class="ritual-card" aria-label="Card inspired by provided UI">
+                    <header>
+                        <p>Today’s ritual</p>
+                        <strong>Club Apex</strong>
+                    </header>
+                    <div class="ritual-row">
+                        <span>Recovery</span>
+                        <div class="progress"><span style="width:94%"></span></div>
+                        <strong>94%</strong>
+                    </div>
+                    <div class="ritual-row">
+                        <span>Macros</span>
+                        <div class="progress alt"><span style="width:86%"></span></div>
+                        <strong>On target</strong>
+                    </div>
+                    <div class="ritual-row">
+                        <span>Focus</span>
+                        <div class="progress focus"><span style="width:72%"></span></div>
+                        <strong>Strength</strong>
+                    </div>
+                    <p class="micro">Illustration lifted directly from the product palette.</p>
+                </div>
+            </section>
+        </main>
 
-    <section class="features">
-        <div class="feature-card">
-            <div class="icon blue"></div>
-            <h3>Smart Nutrition Tracking</h3>
-        </div>
+        <section class="cta" id="download">
+            <div>
+                <p class="eyebrow">iOS • Android • Vision Pro</p>
+                <h2>Install the ThryveFit Performance Lab.</h2>
+                <p>Request the beta link or drop into TestFlight today. The package includes wallpapers, brand kit, and motion assets that match the live app.</p>
+            </div>
+            <div class="cta-actions">
+                <button class="cta-btn">Request beta invite</button>
+                <button class="glass-btn">Download brand kit</button>
+            </div>
+        </section>
 
-        <div class="feature-card">
-            <div class="icon green"></div>
-            <h3>Personalized Workout Plans</h3>
-        </div>
+        <footer class="footer">
+            <p>&copy; <span id="year"></span> ThryveFit. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+                <a href="#">Brand</a>
+            </p>
+        </footer>
+    </div>
 
-        <div class="feature-card">
-            <div class="icon graph"></div>
-            <h3>Advanced Progress Analytics</h3>
-        </div>
-    </section>
-
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
