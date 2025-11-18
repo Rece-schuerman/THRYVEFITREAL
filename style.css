@@ -1,65 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThryveFit – Track. Train. Transform.</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
 
-<body>
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-left">
-            <!-- Replace this placeholder with your SVG logo -->
-            <div class="logo-placeholder"></div>
-            <h1 class="brand">Thryve<span>Fit</span></h1>
-        </div>
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <div class="nav-right">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Download</a>
-            <button class="nav-btn">Get Started</button>
-        </div>
-    </nav>
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Track. Train. Transform.</h1>
-            <p>Your all-in-one performance lab for workouts, nutrition, and progress tracking.</p>
-            <button class="cta-btn">Get Started</button>
-        </div>
+.logo-placeholder {
+    width: 45px;
+    height: 45px;
+    background: #1E40FF;
+    border-radius: 8px;
+}
 
-        <div class="hero-mockups">
-            <img src="mockup1.png" class="phone phone1" alt="App Mockup">
-            <img src="mockup2.png" class="phone phone2" alt="App Mockup">
-            <img src="mockup3.png" class="phone phone3" alt="App Mockup">
-        </div>
-    </section>
+.brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
 
-    <!-- FEATURES SECTION -->
-    <section class="features">
-        <div class="feature-card">
-            <div class="icon blue"></div>
-            <h3>Smart Nutrition Tracking</h3>
-            <p>Track calories, macros, and food intake effortlessly with intelligent tools.</p>
-        </div>
+.brand span {
+    color: #1E40FF;
+}
 
-        <div class="feature-card">
-            <div class="icon green"></div>
-            <h3>Personalized Workout Plans</h3>
-            <p>Get expert-built training programs tailored to your fitness goals.</p>
-        </div>
+.nav-right a {
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-decoration: none;
+}
 
-        <div class="feature-card">
-            <div class="icon graph"></div>
-            <h3>Advanced Progress Analytics</h3>
-            <p>Visualize trends and analyze performance like a data-driven athlete.</p>
-        </div>
-    </section>
+.nav-btn {
+    background: #1E40FF;
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-</body>
-</html>
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-text p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #ccc;
+}
+
+.cta-btn {
+    margin-top: 2rem;
+    background: #1E40FF;
+    padding: 1rem 2.2rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-mockups {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.phone {
+    width: 240px;
+    border-radius: 28px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+.phone1 { transform: translateY(20px) rotate(-6deg); }
+.phone2 { transform: translateY(-10px); z-index: 3; }
+.phone3 { transform: translateY(30px) rotate(6deg); }
+
+/* FEATURES */
+.features {
+    margin-top: 6rem;
+    padding: 0 5% 6rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #0f0f0f;
+    padding: 2.5rem;
+    border-radius: 16px;
+    min-width: 280px;
+    text-align: center;
+    border: 1px solid #1a1a1a;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.blue { background: #1E40FF; }
+.green { background: #22c55e; }
+.graph { background: linear-gradient(135deg,#1E40FF,#0ea5e9); }
